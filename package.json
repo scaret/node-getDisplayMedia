@@ -1,0 +1,24 @@
+{
+  "name": "getdisplaymedia",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scaret/node-getdisplaymedia.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/scaret/node-getdisplaymedia/issues"
+  },
+  "homepage": "https://github.com/scaret/node-getdisplaymedia#readme",
+  "dependencies": {
+    "node-webrtc": "git+https://git@github.com/node-webrtc/node-webrtc.git#2c0e0d2971606f816cdb556be1a4e9a61dc6177d",
+    "png-info": "0.0.1",
+    "wolfy87-eventemitter": "^5.2.6"
+  }
+}
