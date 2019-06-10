@@ -1,8 +1,11 @@
 const EventEmitter = require('wolfy87-eventemitter');
 const path = require('path');
+const os = require("os");
 const childProcess = require('child_process');
 const fsPromises = require("fs").promises;
 const PNGInfo = require("png-info");
+
+const tmpdir = os.tmpdir();
 
 const createDarwinCapturer = function (options){
     const self = new EventEmitter();
@@ -40,7 +43,7 @@ const createDarwinCapturer = function (options){
     self.capture = async function(){
         var cmd = "screencapture";
         var format = "png";
-        var filePath = path.join(__dirname, "tmp");
+        var filePath = tmpdir;
         var pngFilename = path.join(filePath, `${self.width}x${self.height}_${self.monitorId}.${format}`);
         var args = [
             "-t",
