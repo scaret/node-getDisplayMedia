@@ -1,5 +1,5 @@
 const fs = require("fs");
-const wrtc = require("node-webrtc");
+const wrtc = require("wrtc");
 
 function getDisplayMedia(options){
     const platform = process.platform;
