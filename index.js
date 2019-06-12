@@ -14,6 +14,11 @@ function getDisplayMedia(options){
         source.onFrame(frame);
     });
 
+    track.addEventListener("ended", function(){
+        console.log("video track ended. Stopping screensharing.");
+        capturer.stop();
+    });
+
     return Promise.resolve(stream);
 }
 
