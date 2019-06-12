@@ -51,7 +51,10 @@ const createDarwinCapturer = function (options){
             "-x",
             pngFilename,
         ];
-        if (self.monitorId){
+        if (self.monitorId === 1){
+            // do nothing
+        }
+        else if (self.monitorId){
             args = ["-D", self.monitorId].concat(args);
         }else{
             args = ["-b"].concat(args);
