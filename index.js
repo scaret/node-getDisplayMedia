@@ -3,7 +3,7 @@ const wrtc = require("wrtc");
 
 function getDisplayMedia(options){
     const platform = process.platform;
-    const capturer = require(`./capture/${platform}`)(options || {});
+    const capturer = require(`./capture/${platform}/capture`)(options || {});
     const source = new wrtc.nonstandard.RTCVideoSource();
     const track = source.createTrack();
     const stream = new wrtc.MediaStream();
